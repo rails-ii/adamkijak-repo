@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US"> 
+    <head> 
+    <title><%= h(yield(:title) || "CeeMeS") %></title>
+    <%= stylesheet_link_tag 'application' %>
+    </head> 
+    <body> 
+        <div id="header"> 
+            <h1>CeeMeS</h1> 
+            <p id="skipto"> 
+                Skip to:
+                <a href="#content">content</a>,
+                <a href="#navigation">navigation</a> 
+            </p> 
+        </div> 
+        <div id="body"> 
+            <div id="body-inner"> 
+                <div id="navigation"> 
+                    <h2>Menu</h2> 
+                    <ul> 
+                        <li>Tutaj</li> 
+                        <li>beda</li> 
+                        <li>kategorie</li>
+                        <ul>
+                            <li>oraz</li>
+                            <li>podkategorie</li>
+                        </ul> 
+                    </ul> 
+                </div> 
+                <div id="content"> 
+                    <p>
+                    Tutaj beda wyswietlane skróty artykułów (np. pierwsze 20 lini). Wpisy te będą zawierały date, nagłówek oraz w.w. skrót. Będą wyświetlane te które należą do wybranej kategorii, w porządku chronologicznym.
+                    </p> 
+                    <p>
+                    Artykuły będą dodawane przez redaktora, za pomocą odpowiedniego panelu.
+                    Panel ten będzie zabezpieczony hasłem.
+                    </p>
+                </div> 
+            </div> 
+        </div> 
+        <div id="footer"> 
+            <p>Copyright &copy; 2010 Adam Kijak</p> 
+        </div> 
+    </body> 
+</html> 

@@ -1,0 +1,99 @@
+#header, #footer
+{
+    border: 1px solid black;
+    background: #036;
+    color: #fff;
+    text-align: center;
+}
+#footer
+{
+//    background: #f60;
+    padding: 0px;
+}
+#body
+{
+    border-collapse: collapse;
+    display: table;
+    table-layout: fixed;
+}
+#body-inner
+{
+    display: table-row;
+}
+#navigation, #content, #sidebar
+{
+    display: table-cell;
+    padding: 0 1em;
+}
+#navigation
+{
+    background: #f0f0f0;
+    border: 0 solid #d0d0d0;
+    border-right-width: 1px;
+    width: 200px;
+}
+#content
+{
+    width: 99%;
+}
+#sidebar
+{
+    width: 33%;
+}
+#sidebar p
+{
+    border-left: 1px solid #d0d0d0;
+    margin-left: -1em;
+    padding-left: 1em;
+}
+#skipto
+{
+    left: -9999px;
+    position: absolute;
+}
+ul 
+{
+    margin-left:-24px; 
+    list-style:square; 
+}
+/*<!--[if lte IE 7]>
+<style type="text/css">
+    #body
+    {
+        overflow: visible;
+        width: 100%;
+    }
+    #navigation
+    {
+        border-bottom-width: 1px;
+        border-right-width: 0;
+        margin-bottom: 1em;
+        width: auto;
+    }
+    #navigation h2
+    {
+        margin: 0;
+    }
+    #navigation ul
+    {
+        margin: 0;
+        text-align: center;
+    }
+    #navigation li
+    {
+        display: inline;
+        margin: 0 0.5em;
+    }
+    #content
+    {
+        float: left;
+        width: 60%;
+    }
+    #sidebar
+    {
+        float: left;
+        width: 30%;
+    }
+</style>
+<![endif]--> 
+*/
