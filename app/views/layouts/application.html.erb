@@ -27,39 +27,28 @@
                 <div id="navigation"> 
                     <h2>Menu</h2> 
                     <ul id="collapser">
-                    <li>Kategoria 1
+                    <% @categories.first.articles.each do |article| %>
+                      <li><%=article.title%></li>
+                    <%end%>
+                    <% @categories.each do |category| %>
+                      <%if category.id != 1%>
+                      <li><%= category.name%>
                       <ul>
-                        <li>Artykuł 1.1</li>
-                        <li>Kategoria 1.2
-                          <ul>
-                              <li>Artykuł 1.2.1</li>
-                              <li>Artykuł 1.2.2</li>
-                          </ul> 	
-                        </li>
-                        <li>Artykuł 1.3</li>
+                      <% category.articles.each do |article| %>
+                        <li><%=article.title%></li>
+                      <%end%>
                       </ul>
-                    </li>
-                    <li>Kategoria 2
-                      <ul>
-                        <li>Kategoria 2.1
-                          <ul>
-                            <li>Artykuł 2.1.1</li>
-                            <li>Artykuł 2.2.2</li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>Artykuł3</li>
-                              </ul>
+                      </li>
+                      <%end%>
+                    <%end%>
                     </div> 
                 <div id="content"> 
-                    <p>
-                    Tutaj beda wyswietlane skróty artykułów (np. pierwsze 20 lini). Wpisy te będą zawierały date, nagłówek oraz w.w. skrót. Będą wyświetlane te które należą do wybranej kategorii, w porządku chronologicznym.
-                    </p> 
-                    <p>
-                    Artykuły będą dodawane przez redaktora, za pomocą odpowiedniego panelu.
-                    Panel ten będzie zabezpieczony hasłem.
-                    </p>
+                     Tutaj bedzie wyświetlanie artykułów chronologicznie z paginacją.
+                     Po klikniecu na dany artykuł w menu wyświetli się tutaj.
+                     Będzie opcja szukania.
+                     Będzie logowanie się na konto redaktora który będzie zarządzał artykułami 
+                     i kategoriami.
+                    <%=yield%>
                 </div> 
             </div> 
         </div> 

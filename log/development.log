@@ -1990,3 +1990,1807 @@ Processing HomeController#index (for 127.0.0.1 at 2010-12-06 20:33:17) [GET]
 Rendering template within layouts/application
 Rendering home/index
 Completed in 50ms (View: 43, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-12-06 20:36:22) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 29ms (View: 22, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-12-06 20:36:41) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 147ms (View: 141, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-06 20:37:28) [GET]
+
+ActionController::RoutingError (No route matches "/article/new" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 20:38:25) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: articles: SELECT * FROM "articles" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: articles: SELECT * FROM "articles" ):
+  app/controllers/articles_controller.rb:5:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (138.0ms)
+Rendered rescues/_request_and_response (5.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-06 20:38:30) [GET]
+
+NameError (uninitialized constant ArticleController):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (222.9ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 20:38:46) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSQLite3::SQLException: no such table: articles: SELECT * FROM "articles" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: articles: SELECT * FROM "articles" ):
+  app/controllers/articles_controller.rb:5:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (136.3ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (651.1ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (22.4ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (1.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20101206193222)
+  [4;35;1mSQL (1.1ms)[0m   [0mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255), "category_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101206193222')[0m
+Migrating to CreateCategories (20101206193245)
+  [4;35;1mSQL (0.9ms)[0m   [0mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101206193245')[0m
+  [4;35;1mSQL (1.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("categories")[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 20:39:07) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 62ms (View: 43, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 20:43:09) [GET]
+
+NameError (undefined local variable or method `‘application’' for #<ArticlesController:0xb6a19abc>):
+  app/controllers/articles_controller.rb:5:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (115.2ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 20:43:22) [GET]
+Rendering template within layouts/application
+Rendering articles/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #10 of app/views/articles/index.html.erb:
+7:     <th>Category</th>
+8:   </tr>
+9: 
+10: <% @articles.each do |article| %>
+11:   <tr>
+12:     <td><%=h article.title %></td>
+13:     <td><%=h article.content %></td>
+
+    app/views/articles/index.html.erb:10
+    app/controllers/articles_controller.rb:5:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (141.9ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 20:44:03) [GET]
+Rendering template within layouts/application
+Rendering articles/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #10 of app/views/articles/index.html.erb:
+7:     <th>Category</th>
+8:   </tr>
+9: 
+10: <% @articles.each do |article| %>
+11:   <tr>
+12:     <td><%=h article.title %></td>
+13:     <td><%=h article.content %></td>
+
+    app/views/articles/index.html.erb:10
+    app/controllers/articles_controller.rb:5:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (286.5ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 20:44:30) [GET]
+Rendering template within layouts/application
+Rendering articles/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #10 of app/views/articles/index.html.erb:
+7:     <th>Category</th>
+8:   </tr>
+9: 
+10: <% @articles.each do |article| %>
+11:   <tr>
+12:     <td><%=h article.title %></td>
+13:     <td><%=h article.content %></td>
+
+    app/views/articles/index.html.erb:10
+    app/controllers/articles_controller.rb:5:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (140.5ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 20:44:47) [GET]
+  [4;35;1mArticle Load (1.2ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+
+ActionController::DoubleRenderError (Can only render or redirect once per action):
+  app/controllers/articles_controller.rb:8:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (160.4ms)
+Rendered rescues/_request_and_response (1.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 20:45:01) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 25ms (View: 7, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-06 20:46:02) [GET]
+
+NoMethodError (undefined method `render' for ArticlesController:Class):
+  app/controllers/articles_controller.rb:2
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (135.7ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 20:49:02) [GET]
+  [4;35;1mArticle Load (1.4ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 26ms (View: 5, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 20:49:08) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 20ms (View: 4, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 20:49:47) [GET]
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 21ms (View: 4, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 20:53:08) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 23ms (View: 5, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 20:53:37) [GET]
+  [4;36;1mArticle Load (1.3ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 57ms (View: 41, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-12-06 20:53:41) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 54ms (View: 47, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 20:53:49) [GET]
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 21ms (View: 6, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 20:55:21) [GET]
+  [4;36;1mArticle Load (23.2ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 146ms (View: 10, DB: 23) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 20:55:27) [GET]
+  [4;35;1mArticle Load (1.1ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 27ms (View: 10, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-12-06 20:55:31) [GET]
+Rendering template within layouts/application
+Rendering articles/new
+Completed in 100ms (View: 78, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 20:55:34) [GET]
+  [4;36;1mArticle Load (0.9ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 24ms (View: 8, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 20:55:43) [GET]
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 24ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 20:56:26) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 23ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 20:57:54) [GET]
+  [4;35;1mArticle Load (1.3ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 40ms (View: 23, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-12-06 20:57:59) [GET]
+Rendering template within layouts/application
+Rendering articles/new
+Completed in 54ms (View: 34, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2010-12-06 20:58:04) [POST]
+  Parameters: {"article"=>{"title"=>"a", "category_id"=>"a", "content"=>"a"}, "commit"=>"Create", "authenticity_token"=>"jwUH/EwwSLpMyLwrNxahrNGhsxcnybeYA+7LNO6JNTk="}
+  [4;36;1mArticle Create (0.9ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "updated_at", "category_id", "content") VALUES('2010-12-06 19:58:04', 'a', '2010-12-06 19:58:04', 0, 'a')[0m
+Redirected to http://localhost:3000/articles/1
+Completed in 1245ms (DB: 1) | 302 Found [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-12-06 20:58:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 47ms (View: 25, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 20:58:09) [GET]
+  [4;36;1mArticle Load (1.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 45ms (View: 29, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 20:58:13) [GET]
+  [4;35;1mArticle Load (1.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 45ms (View: 29, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 20:59:00) [GET]
+  [4;36;1mArticle Load (2.2ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 62ms (View: 45, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 20:59:44) [GET]
+  [4;35;1mArticle Load (2.4ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 63ms (View: 45, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 21:02:39) [GET]
+  [4;36;1mArticle Load (2.3ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 63ms (View: 44, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 21:03:36) [GET]
+  [4;35;1mArticle Load (1.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 62ms (View: 46, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2010-12-06 21:04:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.9ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/edit
+Completed in 79ms (View: 56, DB: 1) | 200 OK [http://localhost/articles/1/edit]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2010-12-06 21:04:09) [PUT]
+  Parameters: {"article"=>{"title"=>"a", "category_id"=>"Main", "content"=>"a"}, "commit"=>"Update", "authenticity_token"=>"jwUH/EwwSLpMyLwrNxahrNGhsxcnybeYA+7LNO6JNTk=", "id"=>"1"}
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Redirected to http://localhost:3000/articles/1
+Completed in 159ms (DB: 1) | 302 Found [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-12-06 21:04:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 35ms (View: 13, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 21:04:18) [GET]
+  [4;35;1mArticle Load (1.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 48ms (View: 32, DB: 2) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 21:06:56) [GET]
+  [4;36;1mArticle Load (2.3ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 47ms (View: 29, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 21:10:49) [GET]
+  [4;35;1mArticle Load (2.2ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 106ms (View: 81, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2010-12-06 21:11:05) [DELETE]
+  Parameters: {"authenticity_token"=>"jwUH/EwwSLpMyLwrNxahrNGhsxcnybeYA+7LNO6JNTk=", "id"=>"1"}
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+  [4;35;1mArticle Destroy (0.5ms)[0m   [0mDELETE FROM "articles" WHERE "id" = 1[0m
+Redirected to http://localhost:3000/articles
+Completed in 474ms (DB: 2) | 302 Found [http://localhost/articles/1]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 21:11:06) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 26ms (View: 8, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-12-06 21:11:15) [GET]
+  [4;35;1mCategory Load (1.4ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 60ms (View: 41, DB: 1) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2010-12-06 21:11:18) [GET]
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 65ms (View: 46, DB: 0) | 200 OK [http://localhost/categories/new]
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2010-12-06 21:11:32) [POST]
+  Parameters: {"category"=>{"name"=>"Main"}, "commit"=>"Create", "authenticity_token"=>"jwUH/EwwSLpMyLwrNxahrNGhsxcnybeYA+7LNO6JNTk="}
+  [4;36;1mCategory Create (0.6ms)[0m   [0;1mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES('Main', '2010-12-06 20:11:32', '2010-12-06 20:11:32')[0m
+Redirected to http://localhost:3000/categories/1
+Completed in 1831ms (DB: 1) | 302 Found [http://localhost/categories]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2010-12-06 21:11:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCategory Load (1.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendering template within layouts/categories
+Rendering categories/show
+Completed in 46ms (View: 22, DB: 1) | 200 OK [http://localhost/categories/1]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-12-06 21:11:35) [GET]
+  [4;36;1mCategory Load (1.3ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 48ms (View: 29, DB: 1) | 200 OK [http://localhost/categories]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-12-06 21:11:43) [GET]
+Rendering template within layouts/application
+Rendering articles/new
+Completed in 51ms (View: 32, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2010-12-06 21:11:59) [POST]
+  Parameters: {"article"=>{"title"=>"Artykuł 1", "category_id"=>"0", "content"=>"Artykuł 1Artykuł 1Artykuł 1"}, "commit"=>"Create", "authenticity_token"=>"jwUH/EwwSLpMyLwrNxahrNGhsxcnybeYA+7LNO6JNTk="}
+  [4;35;1mArticle Create (0.6ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "updated_at", "category_id", "content") VALUES('2010-12-06 20:11:59', 'Artykuł 1', '2010-12-06 20:11:59', 0, 'Artykuł 1Artykuł 1Artykuł 1')[0m
+Redirected to http://localhost:3000/articles/2
+Completed in 1151ms (DB: 1) | 302 Found [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-12-06 21:12:00) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 35ms (View: 12, DB: 1) | 200 OK [http://localhost/articles/2]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 21:12:05) [GET]
+  [4;35;1mArticle Load (1.6ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 54ms (View: 35, DB: 2) | 200 OK [http://localhost/articles]
+  [4;36;1mCategory Load (1.4ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 21:12:59) [GET]
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 47ms (View: 29, DB: 2) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20101206193222)
+Migrating to CreateCategories (20101206193245)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("categories")[0m
+  [4;36;1mCategory Load (1.7ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mCategory Load (1.5ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (1.6ms)[0m   [0;1mSELECT * FROM "categories" LIMIT 1[0m
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles".category_id = 1) [0m
+  [4;36;1mCategory Delete all (445.1ms)[0m   [0;1mDELETE FROM "categories" WHERE 1=1[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mArticle Load (2.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mArticle Delete all (638.5ms)[0m   [0mDELETE FROM "articles" WHERE 1=1[0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 21:21:24) [GET]
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #30 of app/views/layouts/application.html.erb:
+27:                 <div id="navigation"> 
+28:                     <h2>Menu</h2> 
+29:                     <ul id="collapser">
+30:                     <% @categories.each do |category| %>
+31:                         <% if category.name == 'Main' %>
+32:                             <% category.each do |article| %>
+33: 
+
+    app/views/layouts/application.html.erb:30
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (270.6ms)
+Rendered rescues/_request_and_response (4.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mCategory Load (1.4ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Create (1.5ms)[0m   [0;1mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES('Main', '2010-12-06 20:22:47', '2010-12-06 20:22:47')[0m
+  [4;36;1mCategory Load (1.7ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mCategory Load (2.0ms)[0m   [0mSELECT * FROM "categories" LIMIT 1[0m
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".category_id = 2) [0m
+  [4;35;1mCategory Load (1.6ms)[0m   [0mSELECT * FROM "categories" LIMIT 1[0m
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".category_id = 2) [0m
+  [4;35;1mCategory Load (1.7ms)[0m   [0mSELECT * FROM "categories" LIMIT 1[0m
+  [4;36;1mCategory Load (1.8ms)[0m   [0;1mSELECT * FROM "categories" LIMIT 1[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (232.1ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (26.9ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (1.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20101206193222)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255), "category_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101206193222')[0m
+Migrating to CreateCategories (20101206193245)
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101206193245')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("categories")[0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 21:26:02) [GET]
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #30 of app/views/layouts/application.html.erb:
+27:                 <div id="navigation"> 
+28:                     <h2>Menu</h2> 
+29:                     <ul id="collapser">
+30:                    <!-- <% @categories.each do |category| %>
+31:                         <% if category.name == 'Main' %>
+32:                             <% category.each do |article| %>
+33: 
+
+    app/views/layouts/application.html.erb:30
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (143.6ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mCategory Load (0.9ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 21:26:16) [GET]
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #30 of app/views/layouts/application.html.erb:
+27:                 <div id="navigation"> 
+28:                     <h2>Menu</h2> 
+29:                     <ul id="collapser">
+30:                    < !-- <% @categories.each do |category| %>
+31:                         <% if category.name == 'Main' %>
+32:                             <% category.each do |article| %>
+33: 
+
+    app/views/layouts/application.html.erb:30
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (286.6ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 21:26:47) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #30 of app/views/layouts/application.html.erb:
+27:                 <div id="navigation"> 
+28:                     <h2>Menu</h2> 
+29:                     <ul id="collapser">
+30:                    <!-- <% @categories.each do |category| %>
+31:                         <% if category.name == 'Main' %>
+32:                             <% category.each do |article| %>
+33: 
+
+    app/views/layouts/application.html.erb:30
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (144.8ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 21:28:28) [GET]
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 45ms (View: 27, DB: 1) | 200 OK [http://localhost/articles]
+  [4;36;1mCategory Load (0.9ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-06 21:28:38) [GET]
+
+ActionController::RoutingError (No route matches "/category/new" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-12-06 21:28:44) [GET]
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 16ms (View: 5, DB: 1) | 200 OK [http://localhost/categories]
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2010-12-06 21:28:46) [GET]
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 45ms (View: 31, DB: 1) | 200 OK [http://localhost/categories/new]
+  [4;36;1mCategory Load (1.9ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2010-12-06 21:28:51) [POST]
+  Parameters: {"category"=>{"name"=>"Main"}, "commit"=>"Create", "authenticity_token"=>"jwUH/EwwSLpMyLwrNxahrNGhsxcnybeYA+7LNO6JNTk="}
+  [4;35;1mCategory Create (0.6ms)[0m   [0mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES('Main', '2010-12-06 20:28:51', '2010-12-06 20:28:51')[0m
+Redirected to http://localhost:3000/categories/1
+Completed in 2159ms (DB: 2) | 302 Found [http://localhost/categories]
+  [4;36;1mCategory Load (1.3ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2010-12-06 21:28:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendering template within layouts/categories
+Rendering categories/show
+Completed in 23ms (View: 8, DB: 2) | 200 OK [http://localhost/categories/1]
+  [4;36;1mCategory Load (1.7ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-12-06 21:28:55) [GET]
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 37ms (View: 28, DB: 2) | 200 OK [http://localhost/categories]
+  [4;36;1mCategory Load (1.6ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 21:29:00) [GET]
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 27ms (View: 7, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mCategory Load (1.5ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-12-06 21:29:02) [GET]
+Rendering template within layouts/application
+Rendering articles/new
+Completed in 55ms (View: 35, DB: 1) | 200 OK [http://localhost/articles/new]
+  [4;36;1mCategory Load (1.7ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mCategory Load (1.5ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;35;1mCategory Load (2.5ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2010-12-06 21:29:36) [POST]
+  Parameters: {"article"=>{"title"=>"Artykuł 1", "category_id"=>"1", "content"=>"aaaaaaa"}, "commit"=>"Create", "authenticity_token"=>"jwUH/EwwSLpMyLwrNxahrNGhsxcnybeYA+7LNO6JNTk="}
+  [4;36;1mArticle Create (0.6ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "updated_at", "category_id", "content") VALUES('2010-12-06 20:29:36', 'Artykuł 1', '2010-12-06 20:29:36', 1, 'aaaaaaa')[0m
+Redirected to http://localhost:3000/articles/1
+Completed in 317ms (DB: 3) | 302 Found [http://localhost/articles]
+  [4;35;1mCategory Load (1.5ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-12-06 21:29:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (3.7ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 56ms (View: 29, DB: 5) | 200 OK [http://localhost/articles/1]
+  [4;36;1mCategory Load (1.7ms)[0m   [0;1mSELECT * FROM "categories" LIMIT 1[0m
+  [4;35;1mArticle Load (1.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles".category_id = 1) [0m
+  [4;35;1mCategory Load (1.4ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-12-06 21:30:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+ERROR: compiling _run_erb_app47views47layouts47application46html46erb RAISED compile error
+/home/adam/RubyOnRails/CeeMeS/app/views/layouts/application.html.erb:30: syntax error, unexpected kDO, expecting kEND
+;  @categories do |category| ; @output_buffer.c...
+                 ^
+/home/adam/RubyOnRails/CeeMeS/app/views/layouts/application.html.erb:64: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47layouts47application46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"> \n<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-US\"> \n    <head> \n    <title>"
+
+
+; @output_buffer.concat(( h(yield(:title) || "CeeMeS") ).to_s); @output_buffer.concat "</title>\n    "
+; @output_buffer.concat(( stylesheet_link_tag 'application', :cache => true ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( javascript_include_tag 'jquery', 'jquery.easing','jquery.collapse', :cache => true ).to_s); @output_buffer.concat "\n\n    <script type=\"text/javascript\">\n        $(function(){\n            \n            $('#collapser').jqcollapse({\n               slide: true,\n               speed: 500,\n               easing: 'easeOutCubic'\n            });\n            \n        });\n            \n      </script>\n    </head> \n    <body> \n        <div id=\"header\"> \n            <h1>CeeMeS</h1> \n        </div> \n        <div id=\"body\"> \n            <div id=\"body-inner\"> \n                <div id=\"navigation\"> \n                    <h2>Menu</h2> \n                    <ul id=\"collapser\">\n                    "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;  @categories do |category| ; @output_buffer.concat "\n                    "
+; end; @output_buffer.concat "\n                    <li>Artyku\305\202 1</li>\n                    <li>Kategoria 1\n                        <ul>\n                            <li>Artyku\305\202 1.1</li>\n                            <li>Artyku\305\202 1.2</li>\n                            <li>Artyku\305\202 1.3</li>\n                        </ul> \t\n                    </li>\n                    <li>Kategoria 2\n                        <ul>\n                            <li>Artyku\305\202 2.1</li>\n                            <li>Artyku\305\202 2.2</li>\n                            <li>Artyku\305\202 2.3</li>\n                        </ul> \t\n                    </li>\n                    </div> \n                <div id=\"content\"> \n                     Tutaj bedzie wy\305\233wietlanie artyku\305\202\303\263w chronologicznie z paginacj\304\205.\n                     Po klikniecu na dany artyku\305\202 w menu wy\305\233wietli si\304\231 tutaj.\n                     B\304\231dzie opcja szukania.\n                     B\304\231dzie logowanie si\304\231 na konto redaktora kt\303\263ry b\304\231dzie zarz\304\205dza\305\202 artyku\305\202ami \n                     i kategoriami.\n                    "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+; @output_buffer.concat((yield).to_s); @output_buffer.concat "\n                </div> \n            </div> \n        </div> \n        <div id=\"footer\"> \n            <p>Copyright &copy; 2010 Adam Kijak</p> \n        </div> \n    </body> \n</html> \n"
+
+
+
+
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/adam/RubyOnRails/CeeMeS/app/views/layouts/application.html.erb:64:in `compile!'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:352:in `_render_with_layout'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/var/lib/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/adam/RubyOnRails/CeeMeS/app/controllers/articles_controller.rb:14:in `show'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/var/lib/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/var/lib/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/var/lib/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/var/lib/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/var/lib/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/var/lib/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/var/lib/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+/var/lib/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/adam/RubyOnRails/CeeMeS/app/views/layouts/application.html.erb:30: syntax error, unexpected kDO, expecting kEND
+;  @categories do |category| ; @output_buffer.c...
+                 ^
+/home/adam/RubyOnRails/CeeMeS/app/views/layouts/application.html.erb:64: syntax error, unexpected kENSURE, expecting $end) on line #30 of app/views/layouts/application.html.erb:
+27:                 <div id="navigation"> 
+28:                     <h2>Menu</h2> 
+29:                     <ul id="collapser">
+30:                     <% @categories do |category| %>
+31:                     <%end%>
+32:                     <li>Artykuł 1</li>
+33:                     <li>Kategoria 1
+
+    app/views/layouts/application.html.erb:64:in `compile!'
+    app/controllers/articles_controller.rb:14:in `show'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (155.4ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mCategory Load (1.3ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-12-06 21:30:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (1.5ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #30 of app/views/layouts/application.html.erb:
+27:                 <div id="navigation"> 
+28:                     <h2>Menu</h2> 
+29:                     <ul id="collapser">
+30:                     <% @categories.each do |category| %>
+31:                     <%end%>
+32:                     <li>Artykuł 1</li>
+33:                     <li>Kategoria 1
+
+    app/views/layouts/application.html.erb:30
+    app/controllers/articles_controller.rb:14:in `show'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (160.2ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mCategory Load (1.3ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-12-06 21:33:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (1.5ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #30 of app/views/layouts/application.html.erb:
+27:                 <div id="navigation"> 
+28:                     <h2>Menu</h2> 
+29:                     <ul id="collapser">
+30:                     <% @categories.each do |category| %>
+31:                     <%end%>
+32:                     <li>Artykuł 1</li>
+33:                     <li>Kategoria 1
+
+    app/views/layouts/application.html.erb:30
+    app/controllers/articles_controller.rb:14:in `show'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (154.6ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mCategory Load (1.4ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2010-12-06 21:34:25) [GET]
+  Parameters: {"id"=>"1"}
+
+NameError (uninitialized constant ArticlesController):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (97.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mCategory Load (1.4ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-12-06 21:34:35) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (1.5ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #30 of app/views/layouts/application.html.erb:
+27:                 <div id="navigation"> 
+28:                     <h2>Menu</h2> 
+29:                     <ul id="collapser">
+30:                     <% @categories.each do |category| %>
+31:                     <%end%>
+32:                     <li>Artykuł 1</li>
+33:                     <li>Kategoria 1
+
+    app/views/layouts/application.html.erb:30
+    app/controllers/articles_controller.rb:17:in `show'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (153.9ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mCategory Load (1.4ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 21:34:50) [GET]
+  [4;35;1mArticle Load (1.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #30 of app/views/layouts/application.html.erb:
+27:                 <div id="navigation"> 
+28:                     <h2>Menu</h2> 
+29:                     <ul id="collapser">
+30:                     <% @categories.each do |category| %>
+31:                     <%end%>
+32:                     <li>Artykuł 1</li>
+33:                     <li>Kategoria 1
+
+    app/views/layouts/application.html.erb:30
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (284.7ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mCategory Load (1.4ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-06 21:35:00) [GET]
+
+NameError (uninitialized constant ArticlesController):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (96.2ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mCategory Load (1.4ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 21:35:16) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 50ms (View: 30, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mCategory Load (1.4ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 21:36:25) [GET]
+  [4;35;1mArticle Load (1.5ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 70ms (View: 48, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mCategory Load (1.4ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2010-12-06 21:36:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (1.7ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/edit
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.first) on line #30 of app/views/layouts/application.html.erb:
+27:                 <div id="navigation"> 
+28:                     <h2>Menu</h2> 
+29:                     <ul id="collapser">
+30:                     <% @categories.first.articles do |article| %>
+31:                       <%= article.title %>
+32:                     <%end%>
+33:                     <li>Artykuł 1</li>
+
+    app/views/layouts/application.html.erb:30
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (154.2ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mCategory Load (1.3ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2010-12-06 21:38:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/edit
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.first) on line #30 of app/views/layouts/application.html.erb:
+27:                 <div id="navigation"> 
+28:                     <h2>Menu</h2> 
+29:                     <ul id="collapser">
+30:                     <% @categories.first.articles do |article| %>
+31:                       <%= article.title %>
+32:                     <%end%>
+33:                     <li>Artykuł 1</li>
+
+    app/views/layouts/application.html.erb:30
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (145.5ms)
+Rendered rescues/_request_and_response (7.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mCategory Load (2.2ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 21:38:12) [GET]
+  [4;36;1mArticle Load (1.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.first) on line #30 of app/views/layouts/application.html.erb:
+27:                 <div id="navigation"> 
+28:                     <h2>Menu</h2> 
+29:                     <ul id="collapser">
+30:                     <% @categories.first.articles do |article| %>
+31:                       <%= article.title %>
+32:                     <%end%>
+33:                     <li>Artykuł 1</li>
+
+    app/views/layouts/application.html.erb:30
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (137.6ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mCategory Load (1.4ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 21:38:47) [GET]
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mArticle Load (1.3ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 53ms (View: 32, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mCategory Load (1.4ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2010-12-06 21:38:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.9ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/edit
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.first) on line #30 of app/views/layouts/application.html.erb:
+27:                 <div id="navigation"> 
+28:                     <h2>Menu</h2> 
+29:                     <ul id="collapser">
+30:                     <% @categories.first.articles do |article| %>
+31:                       <%= article.title %>
+32:                     <%end%>
+33:                     <li>Artykuł 1</li>
+
+    app/views/layouts/application.html.erb:30
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (296.5ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mCategory Load (1.4ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2010-12-06 21:39:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/edit
+Completed in 69ms (View: 41, DB: 2) | 200 OK [http://localhost/articles/1/edit]
+  [4;35;1mCategory Load (1.3ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 21:39:31) [GET]
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mArticle Load (2.4ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 82ms (View: 58, DB: 4) | 200 OK [http://localhost/articles]
+  [4;36;1mCategory Load (1.4ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 21:39:49) [GET]
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 70ms (View: 51, DB: 2) | 200 OK [http://localhost/articles]
+  [4;35;1mCategory Load (2.2ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 21:40:43) [GET]
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 68ms (View: 49, DB: 3) | 200 OK [http://localhost/articles]
+  [4;36;1mCategory Load (1.4ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 21:40:44) [GET]
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mArticle Load (1.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 55ms (View: 34, DB: 3) | 200 OK [http://localhost/articles]
+  [4;35;1mCategory Load (1.4ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 21:41:05) [GET]
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mArticle Load (1.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 73ms (View: 49, DB: 3) | 200 OK [http://localhost/articles]
+  [4;36;1mCategory Load (1.4ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 21:41:32) [GET]
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 72ms (View: 52, DB: 2) | 200 OK [http://localhost/articles]
+  [4;36;1mCategory Load (1.8ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mCategory Load (1.1ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mArticle Load (1.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".category_id = 1) [0m
+  [4;35;1mCategory Load (1.3ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 21:43:34) [GET]
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mArticle Load (1.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".category_id = 1) LIMIT 1[0m
+Completed in 75ms (View: 51, DB: 4) | 200 OK [http://localhost/articles]
+  [4;35;1mCategory Load (1.4ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 21:43:37) [GET]
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mArticle Load (1.7ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".category_id = 1) LIMIT 1[0m
+Completed in 61ms (View: 37, DB: 4) | 200 OK [http://localhost/articles]
+  [4;35;1mCategory Load (1.4ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 21:44:02) [GET]
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mArticle Load (1.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".category_id = 1) LIMIT 1[0m
+Completed in 79ms (View: 54, DB: 4) | 200 OK [http://localhost/articles]
+  [4;35;1mCategory Load (1.4ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2010-12-06 21:44:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mArticle Load (1.5ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/edit
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".category_id = 1) LIMIT 1[0m
+Completed in 70ms (View: 42, DB: 4) | 200 OK [http://localhost/articles/1/edit]
+  [4;35;1mCategory Load (2.1ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2010-12-06 21:44:19) [PUT]
+  Parameters: {"article"=>{"title"=>"artykuł 1", "category_id"=>"1", "content"=>"aaaaaaa"}, "commit"=>"Update", "authenticity_token"=>"jwUH/EwwSLpMyLwrNxahrNGhsxcnybeYA+7LNO6JNTk=", "id"=>"1"}
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+  [4;36;1mArticle Update (0.5ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2010-12-06 20:44:19', "title" = 'artykuł 1' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/articles/1
+Completed in 1298ms (DB: 4) | 302 Found [http://localhost/articles/1]
+  [4;35;1mCategory Load (1.3ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-12-06 21:44:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".category_id = 1) LIMIT 1[0m
+Completed in 45ms (View: 19, DB: 3) | 200 OK [http://localhost/articles/1]
+  [4;35;1mCategory Load (1.4ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-12-06 21:44:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".category_id = 1) [0m
+Completed in 70ms (View: 38, DB: 3) | 200 OK [http://localhost/articles/1]
+  [4;35;1mCategory Load (1.4ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 21:44:58) [GET]
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mArticle Load (1.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mArticle Load (1.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".category_id = 1) [0m
+Completed in 68ms (View: 44, DB: 4) | 200 OK [http://localhost/articles]
+  [4;35;1mCategory Load (1.3ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-12-06 21:45:00) [GET]
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering articles/new
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles".category_id = 1) [0m
+Completed in 67ms (View: 42, DB: 2) | 200 OK [http://localhost/articles/new]
+  [4;36;1mCategory Load (1.4ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2010-12-06 21:45:10) [POST]
+  Parameters: {"article"=>{"title"=>"artykuł 2", "category_id"=>"1", "content"=>"aaaaa"}, "commit"=>"Create", "authenticity_token"=>"jwUH/EwwSLpMyLwrNxahrNGhsxcnybeYA+7LNO6JNTk="}
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mArticle Create (0.8ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "updated_at", "category_id", "content") VALUES('2010-12-06 20:45:10', 'artykuł 2', '2010-12-06 20:45:10', 1, 'aaaaa')[0m
+Redirected to http://localhost:3000/articles/2
+Completed in 711ms (DB: 2) | 302 Found [http://localhost/articles]
+  [4;35;1mCategory Load (1.7ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-12-06 21:45:11) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;36;1mArticle Load (1.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".category_id = 1) [0m
+Completed in 55ms (View: 27, DB: 4) | 200 OK [http://localhost/articles/2]
+  [4;35;1mCategory Load (1.9ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-12-06 21:52:35) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mArticle Load (1.6ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;36;1mArticle Load (1.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".category_id = 1) [0m
+
+ActionView::TemplateError (undefined method `each' for #<Category:0xb6ae1bd4>) on line #33 of app/views/layouts/application.html.erb:
+30:                     <% @categories.first.articles.each do |article| %>
+31:                       <li><%=article.title%></li>
+32:                     <%end%>
+33:                     <% @categories.delete_at(0).each do |category| %>
+34:                       <li><%= category.name%>
+35:                       <ul>
+36:                       <% category.articles.each do |article| %>
+
+    app/views/layouts/application.html.erb:33
+    app/controllers/articles_controller.rb:18:in `show'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (151.1ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mCategory Load (1.3ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-12-06 21:53:48) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mArticle Load (1.5ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;36;1mArticle Load (1.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".category_id = 1) [0m
+Completed in 67ms (View: 37, DB: 4) | 200 OK [http://localhost/articles/2]
+  [4;35;1mCategory Load (1.5ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 21:53:55) [GET]
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mArticle Load (1.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mArticle Load (1.5ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".category_id = 1) [0m
+Completed in 212ms (View: 46, DB: 5) | 200 OK [http://localhost/articles]
+  [4;35;1mCategory Load (1.4ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-12-06 21:54:02) [GET]
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 35ms (View: 23, DB: 1) | 200 OK [http://localhost/categories]
+  [4;35;1mCategory Load (1.4ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2010-12-06 21:54:04) [GET]
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 39ms (View: 26, DB: 1) | 200 OK [http://localhost/categories/new]
+  [4;36;1mCategory Load (1.4ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2010-12-06 21:54:10) [POST]
+  Parameters: {"category"=>{"name"=>"Kategoria 0"}, "commit"=>"Create", "authenticity_token"=>"jwUH/EwwSLpMyLwrNxahrNGhsxcnybeYA+7LNO6JNTk="}
+  [4;35;1mCategory Create (0.9ms)[0m   [0mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES('Kategoria 0', '2010-12-06 20:54:10', '2010-12-06 20:54:10')[0m
+Redirected to http://localhost:3000/categories/2
+Completed in 1162ms (DB: 2) | 302 Found [http://localhost/categories]
+  [4;36;1mCategory Load (1.6ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2010-12-06 21:54:11) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCategory Load (0.9ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+Rendering template within layouts/categories
+Rendering categories/show
+Completed in 23ms (View: 9, DB: 3) | 200 OK [http://localhost/categories/2]
+  [4;36;1mCategory Load (1.8ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-12-06 21:54:24) [GET]
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering articles/new
+  [4;36;1mArticle Load (1.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".category_id = 1) [0m
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles".category_id = 2) [0m
+Completed in 70ms (View: 45, DB: 3) | 200 OK [http://localhost/articles/new]
+  [4;36;1mCategory Load (2.6ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2010-12-06 21:54:39) [POST]
+  Parameters: {"article"=>{"title"=>"zzz", "category_id"=>"2", "content"=>"zzz"}, "commit"=>"Create", "authenticity_token"=>"jwUH/EwwSLpMyLwrNxahrNGhsxcnybeYA+7LNO6JNTk="}
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mArticle Create (0.7ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "updated_at", "category_id", "content") VALUES('2010-12-06 20:54:39', 'zzz', '2010-12-06 20:54:39', 2, 'zzz')[0m
+Redirected to http://localhost:3000/articles/3
+Completed in 1446ms (DB: 3) | 302 Found [http://localhost/articles]
+  [4;35;1mCategory Load (2.4ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-12-06 21:54:41) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;36;1mArticle Load (1.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".category_id = 1) [0m
+  [4;35;1mArticle Load (1.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles".category_id = 2) [0m
+Completed in 202ms (View: 26, DB: 6) | 200 OK [http://localhost/articles/3]
+  [4;36;1mCategory Load (1.7ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 21:54:44) [GET]
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mArticle Load (2.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mArticle Load (1.5ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles".category_id = 1) [0m
+  [4;36;1mArticle Load (1.6ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".category_id = 2) [0m
+Completed in 103ms (View: 73, DB: 7) | 200 OK [http://localhost/articles]
+  [4;35;1mCategory Load (1.6ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 21:55:12) [GET]
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mArticle Load (2.6ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mArticle Load (1.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".category_id = 1) [0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles".category_id = 2) [0m
+Completed in 103ms (View: 79, DB: 7) | 200 OK [http://localhost/articles]
+  [4;36;1mCategory Load (1.6ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 21:57:00) [GET]
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mArticle Load (2.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mArticle Load (2.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles".category_id = 1) [0m
+  [4;36;1mArticle Load (1.5ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".category_id = 2) [0m
+Completed in 102ms (View: 76, DB: 8) | 200 OK [http://localhost/articles]
+  [4;35;1mCategory Load (1.6ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 21:57:14) [GET]
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mArticle Load (1.6ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mArticle Load (1.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".category_id = 1) [0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles".category_id = 2) [0m
+Completed in 85ms (View: 63, DB: 5) | 200 OK [http://localhost/articles]
+  [4;36;1mCategory Load (2.1ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-12-06 21:57:28) [GET]
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mArticle Load (2.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mArticle Load (1.4ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles".category_id = 1) [0m
+  [4;36;1mArticle Load (3.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".category_id = 2) [0m
+Completed in 116ms (View: 87, DB: 9) | 200 OK [http://localhost/articles]

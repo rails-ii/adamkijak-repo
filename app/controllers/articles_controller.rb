@@ -1,18 +1,18 @@
 class ArticlesController < ApplicationController
+  layout "application"
+
+
   # GET /articles
   # GET /articles.xml
   def index
+    @categories = Category.all
     @articles = Article.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @articles }
-    end
   end
 
   # GET /articles/1
   # GET /articles/1.xml
   def show
+    @categories = Category.all
     @article = Article.find(params[:id])
 
     respond_to do |format|
@@ -24,6 +24,7 @@ class ArticlesController < ApplicationController
   # GET /articles/new
   # GET /articles/new.xml
   def new
+    @categories = Category.all
     @article = Article.new
 
     respond_to do |format|
@@ -34,12 +35,14 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1/edit
   def edit
+    @categories = Category.all
     @article = Article.find(params[:id])
   end
 
   # POST /articles
   # POST /articles.xml
   def create
+    @categories = Category.all
     @article = Article.new(params[:article])
 
     respond_to do |format|
@@ -56,6 +59,7 @@ class ArticlesController < ApplicationController
   # PUT /articles/1
   # PUT /articles/1.xml
   def update
+    @categories = Category.all
     @article = Article.find(params[:id])
 
     respond_to do |format|
@@ -72,6 +76,7 @@ class ArticlesController < ApplicationController
   # DELETE /articles/1
   # DELETE /articles/1.xml
   def destroy
+    @categories = Category.all
     @article = Article.find(params[:id])
     @article.destroy
 

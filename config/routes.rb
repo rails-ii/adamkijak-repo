@@ -1,9 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.root :controller => :articles
   map.resources :categories
-
   map.resources :articles
 
-  map.root :controller => :home 
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
