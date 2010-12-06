@@ -2,31 +2,56 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US"> 
     <head> 
     <title><%= h(yield(:title) || "CeeMeS") %></title>
-    <%= stylesheet_link_tag 'application' %>
+    <%= stylesheet_link_tag 'application', :cache => true %>
+    <%= javascript_include_tag 'jquery', 'jquery.easing','jquery.collapse', :cache => true %>
+
+    <script type="text/javascript">
+        $(function(){
+            
+            $('#collapser').jqcollapse({
+               slide: true,
+               speed: 500,
+               easing: 'easeOutCubic'
+            });
+            
+        });
+            
+      </script>
     </head> 
     <body> 
         <div id="header"> 
             <h1>CeeMeS</h1> 
-            <p id="skipto"> 
-                Skip to:
-                <a href="#content">content</a>,
-                <a href="#navigation">navigation</a> 
-            </p> 
         </div> 
         <div id="body"> 
             <div id="body-inner"> 
                 <div id="navigation"> 
                     <h2>Menu</h2> 
-                    <ul> 
-                        <li>Tutaj</li> 
-                        <li>beda</li> 
-                        <li>kategorie</li>
-                        <ul>
-                            <li>oraz</li>
-                            <li>podkategorie</li>
-                        </ul> 
-                    </ul> 
-                </div> 
+                    <ul id="collapser">
+                    <li>Kategoria 1
+                      <ul>
+                        <li>Artykuł 1.1</li>
+                        <li>Kategoria 1.2
+                          <ul>
+                              <li>Artykuł 1.2.1</li>
+                              <li>Artykuł 1.2.2</li>
+                          </ul> 	
+                        </li>
+                        <li>Artykuł 1.3</li>
+                      </ul>
+                    </li>
+                    <li>Kategoria 2
+                      <ul>
+                        <li>Kategoria 2.1
+                          <ul>
+                            <li>Artykuł 2.1.1</li>
+                            <li>Artykuł 2.2.2</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>Artykuł3</li>
+                              </ul>
+                    </div> 
                 <div id="content"> 
                     <p>
                     Tutaj beda wyswietlane skróty artykułów (np. pierwsze 20 lini). Wpisy te będą zawierały date, nagłówek oraz w.w. skrót. Będą wyświetlane te które należą do wybranej kategorii, w porządku chronologicznym.
