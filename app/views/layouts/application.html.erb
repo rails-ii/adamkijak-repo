@@ -27,6 +27,7 @@
                 <div id="navigation"> 
                     <h2>Menu</h2> 
                     <ul id="collapser">
+                    <% if !@categories.nil? && @articles.nil? %>
                     <% @categories.first.articles.each do |article| %>
                       <li><%=article.title%></li>
                     <%end%>
@@ -40,6 +41,7 @@
                       </ul>
                       </li>
                       <%end%>
+                    <%end%>
                     <%end%>
                     </div> 
                 <div id="content"> 
