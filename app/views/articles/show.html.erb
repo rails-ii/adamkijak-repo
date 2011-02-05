@@ -1,18 +1,17 @@
 <p>
-  <b>Title:</b>
-  <%=h @article.title %>
+  <b><%=h @article.title %></b>
 </p>
 
 <p>
-  <b>Content:</b>
   <%=h @article.content %>
 </p>
 
 <p>
   <b>Category:</b>
-  <%=h @article.category_id %>
+  <%=h @categories.find{ |c| c.id == @article.category_id}.name %>
 </p>
 
-
+<%if editor_signed_in?%>
 <%= link_to 'Edit', edit_article_path(@article) %> |
+<%end%>
 <%= link_to 'Back', articles_path %>

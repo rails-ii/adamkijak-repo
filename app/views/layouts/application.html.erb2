@@ -3,7 +3,7 @@
     <head> 
     <title><%= h(yield(:title) || "CeeMeS") %></title>
     <%= stylesheet_link_tag 'application' %>
-    <%= javascript_include_tag 'jquery', 'jquery.easing','jquery.collapse', 'rails'%>
+    <%= javascript_include_tag 'jquery', 'jquery.easing','jquery.collapse'%>
 
     <script type="text/javascript">
         $(function(){
@@ -19,7 +19,6 @@
       </script>
     </head> 
     <body> 
-	<%= csrf_meta_tag %>
         <div id="header"> 
             <h1>CeeMeS</h1> 
         </div> 
@@ -28,27 +27,29 @@
                 <div id="navigation"> 
                     <h2>Menu</h2> 
                     <ul id="collapser">
-					<% @categories = Category.all %>
-                    <% if !@categories.empty? %>
-                      <% @categories.each do |category| %>
-                        <li><%= category.name%>
-                        <ul>
-                        <% category.articles.each do |article| %>
-                          <li><%= link_to article.title, article%></li>
-                        <%end%>
-                        </ul>
-                        </li>
+                    <% if !@categories.nil? %>
+                    <% @categories.first.articles.each do |article| %>
+                      <li><%=article.title%></li>
+                    <%end%>
+                    <% @categories.each do |category| %>
+                      <%if category.id != 1%>
+                      <li><%= category.name%>
+                      <ul>
+                      <% category.articles.each do |article| %>
+                        <li><%=article.title%></li>
+                      <%end%>
+                      </ul>
+                      </li>
                       <%end%>
                     <%end%>
-					<hr>
-					<% if editor_signed_in? %>
-					<%= link_to "Sign out", destroy_editor_session_path %>
-					<%else%>
-					<%=link_to "Sign in", new_editor_session_path %><br>
-					<%=link_to "Sign up", new_editor_registration_path %> 
-					<%end%>
+                    <%end%>
                     </div> 
                 <div id="content"> 
+                     Tutaj bedzie wyświetlanie artykułów chronologicznie z paginacją.
+                     Po klikniecu na dany artykuł w menu wyświetli się tutaj.
+                     Będzie opcja szukania.
+                     Będzie logowanie się na konto redaktora który będzie zarządzał artykułami 
+                     i kategoriami.
                     <%=yield%>
                 </div> 
             </div> 

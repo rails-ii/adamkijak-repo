@@ -1,24 +1,17 @@
-<h1>Listing articles</h1>
+<h1>Articles:</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Content</th>
-    <th>Category</th>
-  </tr>
-
-<% @articles.each do |article| %>
-  <tr>
-    <td><%=h article.title %></td>
-    <td><%=h article.content %></td>
-    <td><%=h article.category_id %></td>
-    <td><%= link_to 'Show', article %></td>
-    <td><%= link_to 'Edit', edit_article_path(article) %></td>
-    <td><%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+<% @articles.sort_by{|a| a.created_at}.reverse.each do |article| %>
+    <b><%=h article.title %></b><br>
+    <%=h article.content %><br>
+    Category: <%=h @categories.find{ |c| c.id == article.category_id}.name %>
+	, Created at: <%= article.created_at%><br>
+    <%= link_to 'Show', article %>
+	<%if editor_signed_in?%>
+    <%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete %></td>
+	<%= link_to 'Edit', edit_article_path(article) %>
+	<%end%>
+	<hr>
 <% end %>
-</table>
-
-<br />
-
+<%if editor_signed_in?%>
 <%= link_to 'New article', new_article_path %>
+<%end%>
