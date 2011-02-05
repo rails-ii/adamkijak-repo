@@ -1,12 +1,12 @@
 class ArticlesController < ApplicationController
   layout "application"
 
-
   # GET /articles
   # GET /articles.xml
   def index
+    @articles = Article.paginate :page => params[:page]
     @categories = Category.all
-    @articles = Article.all
+    #@articles = Article.all
   end
 
   # GET /articles/1

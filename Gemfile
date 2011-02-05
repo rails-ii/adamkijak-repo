@@ -7,7 +7,7 @@ gem 'rails', '3.0.0'
 
 gem 'sqlite3-ruby','= 1.2.5', :require => 'sqlite3'
 gem 'devise', '1.1.rc0'  
-gem 'will_paginate'
+gem 'will_paginate', "~> 3.0.pre2"
 # Use unicorn as the web server
 # gem 'unicorn'
 
