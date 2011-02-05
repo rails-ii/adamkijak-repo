@@ -2,9 +2,9 @@
 
 <% @articles.sort_by{|a| a.created_at}.reverse.each do |article| %>
     <b><%=h article.title %></b><br>
-    <%=h article.content %><br>
     Category: <%=h @categories.find{ |c| c.id == article.category_id}.name %>
-	, Created at: <%= article.created_at%><br>
+	, created at: <%= article.created_at%><br>
+    <%=h article.content %>
     <%= link_to 'Show', article %>
 	<%if editor_signed_in?%>
     <%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete %></td>

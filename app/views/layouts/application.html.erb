@@ -27,6 +27,7 @@
             <div id="body-inner"> 
                 <div id="navigation"> 
                     <h2>Menu</h2> 
+					<%= link_to 'Home', root_path %>
                     <ul id="collapser">
 					<% @categories = Category.all %>
                     <% if !@categories.empty? %>
@@ -39,6 +40,9 @@
                         </ul>
                         </li>
                       <%end%>
+					  <% if editor_signed_in? %>
+					    <%= link_to 'Categories', categories_path%>
+					  <%end%>
                     <%end%>
 					<hr>
 					<% if editor_signed_in? %>
