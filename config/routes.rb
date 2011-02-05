@@ -1,4 +1,6 @@
 CeeMeS::Application.routes.draw do
+  devise_for :editors
+
   root :to => "articles#index"
   resources :categories
   resources :articles

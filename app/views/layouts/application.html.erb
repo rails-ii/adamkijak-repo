@@ -27,7 +27,7 @@
                 <div id="navigation"> 
                     <h2>Menu</h2> 
                     <ul id="collapser">
-                    <% if !@categories.nil? %>
+                    <% if !@categories.empty? %>
                     <% @categories.first.articles.each do |article| %>
                       <li><%=article.title%></li>
                     <%end%>
@@ -43,6 +43,13 @@
                       <%end%>
                     <%end%>
                     <%end%>
+					<hr>
+					<% if editor_signed_in? %>
+					<%= link_to "Sign out", destroy_editor_session_path %>
+					<%else%>
+					<%=link_to "Sign in", new_editor_session_path %><br>
+					<%=link_to "Sign up", new_editor_registration_path %> 
+					<%end%>
                     </div> 
                 <div id="content"> 
                      Tutaj bedzie wyświetlanie artykułów chronologicznie z paginacją.

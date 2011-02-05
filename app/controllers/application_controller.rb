@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   layout 'application'
   
   @categories = Category.all
+  @articles	  = Article.all
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
 end
