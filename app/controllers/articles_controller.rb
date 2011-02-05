@@ -1,13 +1,13 @@
 class ArticlesController < ApplicationController
   layout "application"
+  uses_tiny_mce :options => {:theme => 'advanced'}
 
-  # GET /articles
-  # GET /articles.xml
-  def index
-    @articles = Article.paginate :page => params[:page]
-    @categories = Category.all
-    #@articles = Article.all
-  end
+   # GET /articles
+   # GET /articles.xml
+   def index
+     @articles = Article.paginate :page => params[:page], :order => 'created_at DESC'
+     @categories = Category.all
+   end
 
   # GET /articles/1
   # GET /articles/1.xml

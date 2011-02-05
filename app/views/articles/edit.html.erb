@@ -9,11 +9,11 @@
   </p>
   <p>
     <%= f.label :content %><br />
-    <%= f.text_field :content %>
+    <%= f.text_area :content , :class => "mceEditor" %>
   </p>
   <p>
     <%= f.label :category_id %><br />
-    <%= f.text_field :category_id %>
+    <%= f.select :category_id, @categories.map { |c| [c.name,c.id]}, :required => true %>
   </p>
   <p>
     <%= f.submit 'Update' %>

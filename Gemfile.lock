@@ -64,6 +64,7 @@ GEM
     rake (0.8.7)
     sqlite3-ruby (1.2.5)
     thor (0.14.6)
+    tiny_mce (0.1.4)
     treetop (1.4.9)
       polyglot (>= 0.3.1)
     tzinfo (0.3.24)
@@ -78,4 +79,5 @@ DEPENDENCIES
   devise (= 1.1.rc0)
   rails (= 3.0.0)
   sqlite3-ruby (= 1.2.5)
+  tiny_mce
   will_paginate (~> 3.0.pre2)
