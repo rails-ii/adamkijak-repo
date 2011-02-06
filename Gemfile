@@ -9,6 +9,8 @@ gem 'sqlite3-ruby','= 1.2.5', :require => 'sqlite3'
 gem 'devise', '= 1.1.2'
 gem 'will_paginate', "~> 3.0.pre2"
 gem 'tiny_mce'
+gem 'truncate_html'
+
 group :test do
   gem 'capybara'
   gem 'launchy'
