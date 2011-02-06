@@ -6,9 +6,14 @@ gem 'rails', '3.0.0'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3-ruby','= 1.2.5', :require => 'sqlite3'
-gem 'devise', '1.1.rc0'  
+gem 'devise', '= 1.1.2'
 gem 'will_paginate', "~> 3.0.pre2"
 gem 'tiny_mce'
+group :test do
+  gem 'capybara'
+  gem 'launchy'
+end
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
