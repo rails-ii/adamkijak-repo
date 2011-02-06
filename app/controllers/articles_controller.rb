@@ -2,15 +2,15 @@ class ArticlesController < ApplicationController
   layout "application"
   uses_tiny_mce :options => {:theme => 'advanced'}
 
-   # GET /articles
-   # GET /articles.xml
+   # Wyświetlanie artykułów z paginacją
+   # (GET /articles)
    def index
      @articles = Article.paginate :page => params[:page], :order => 'created_at DESC'
      @categories = Category.all
    end
 
-  # GET /articles/1
-  # GET /articles/1.xml
+  # Wyświetlanie artykułu o zadanym id 	
+  # (GET /articles/:id)
   def show
     @categories = Category.all
     @article = Article.find(params[:id])
@@ -21,8 +21,8 @@ class ArticlesController < ApplicationController
     end
   end
 
-  # GET /articles/new
-  # GET /articles/new.xml
+  # Redagowanie nowego arytkułu  
+  # (GET /articles/new)
   def new
     @categories = Category.all
     @article = Article.new
@@ -33,14 +33,15 @@ class ArticlesController < ApplicationController
     end
   end
 
-  # GET /articles/1/edit
+  # Edycja arytkułu o zadanym id
+  # (GET /articles/1/edit)
   def edit
     @categories = Category.all
     @article = Article.find(params[:id])
   end
 
-  # POST /articles
-  # POST /articles.xml
+  # Utworzenie nowego artykułu, wraz z wyświetleniem informacji o sukcesie
+  # (POST /articles)
   def create
     @categories = Category.all
     @article = Article.new(params[:article])
@@ -56,8 +57,8 @@ class ArticlesController < ApplicationController
     end
   end
 
-  # PUT /articles/1
-  # PUT /articles/1.xml
+  # Aktualizacja artykułu o zadanym id
+  # (PUT /articles/1)
   def update
     @categories = Category.all
     @article = Article.find(params[:id])
@@ -73,8 +74,8 @@ class ArticlesController < ApplicationController
     end
   end
 
+  # Usunięcie artykułu
   # DELETE /articles/1
-  # DELETE /articles/1.xml
   def destroy
     @categories = Category.all
     @article = Article.find(params[:id])

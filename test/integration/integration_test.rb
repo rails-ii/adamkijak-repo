@@ -1,11 +1,23 @@
 require "test_helper"
 
+# Test integracyjny symuluje zachowanie użytkownia, który wykonuje w kolejności następujące 
+# kroki:
+# 1. Zarejestrowanie się.
+# 2. Utworzenie dwóch kategorii.
+# 3. Utworzenie dwóch artykułów (po jednym dla każdej kategorii).
+# 4. Wylogowanie się (sprawdzenie czy nie wyświetlają się linki przeznaczone dla redaktora).
+# 5. Zalogowanie się.
+# 6. Usunięcie artykułu.
+# 6. Utworzenie 10 artykułów (testowanie paginacji).
+#
+# Po zakończonym teście wyświetlany jest w przeglądarce, efekt wizualny (html) efekt testów.
 class IntegrationTest < ActionController::IntegrationTest
 
   setup do
   end
 
   test "use case scenario" do
+    # wejdź na /
 	visit '/'
 	click_link 'Sign up'
 	fill_in 'Email', :with => 'test@test.pl'

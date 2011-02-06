@@ -1,3 +1,4 @@
+# Redaktor do uwierzytelniania posiada email i hasło.
 class Editor < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :token_authenticatable, :lockable, :timeoutable and :activatable

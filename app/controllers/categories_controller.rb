@@ -1,8 +1,8 @@
 class CategoriesController < ApplicationController
   layout "application"
 
+  # Wyświetlanie kategorii
   # GET /categories
-  # GET /categories.xml
   def index
     @categories = Category.all
 
@@ -12,8 +12,8 @@ class CategoriesController < ApplicationController
     end
   end
 
+  # Wyświetlanie kategorii o zadanym id
   # GET /categories/1
-  # GET /categories/1.xml
   def show
     @category = Category.find(params[:id])
 
@@ -23,8 +23,8 @@ class CategoriesController < ApplicationController
     end
   end
 
+  # Redagowanie nowej kategorii 
   # GET /categories/new
-  # GET /categories/new.xml
   def new
     @category = Category.new
 
@@ -34,13 +34,14 @@ class CategoriesController < ApplicationController
     end
   end
 
+  # Edycja kategorii o zadanym id
   # GET /categories/1/edit
   def edit
     @category = Category.find(params[:id])
   end
 
+  # Utworzenie nowej kateogrii, wraz z wyświetleniem informacji o sukcesie
   # POST /categories
-  # POST /categories.xml
   def create
     @category = Category.new(params[:category])
 
@@ -55,8 +56,8 @@ class CategoriesController < ApplicationController
     end
   end
 
+  # Aktualizacja kategorii o zadanym id
   # PUT /categories/1
-  # PUT /categories/1.xml
   def update
     @category = Category.find(params[:id])
 
@@ -71,8 +72,8 @@ class CategoriesController < ApplicationController
     end
   end
 
+  # Usunięcie kategorii 
   # DELETE /categories/1
-  # DELETE /categories/1.xml
   def destroy
     @category = Category.find(params[:id])
     @category.destroy

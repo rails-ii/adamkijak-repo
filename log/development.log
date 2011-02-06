@@ -7650,3 +7650,40 @@ Completed 200 OK in 192ms (Views: 181.4ms | ActiveRecord: 9.7ms)
   [1m[35mSQL (24.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110204224241')
   [1m[36mSQL (20.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101206193222')[0m
   [1m[35mSQL (20.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101206193245')
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-06 20:05:51 +0100
+  [1m[36mSQL (3.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mCategory Load (0.8ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36mArticle Load (1.1ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (1.0ms)[0m  SELECT "articles".* FROM "articles" ORDER BY created_at DESC LIMIT 1 OFFSET 0
+  [1m[36mSQL (0.7ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "articles"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  [1m[35mArticle Load (0.8ms)[0m  SELECT "articles".* FROM "articles" WHERE ("articles".category_id = 1)
+  [1m[36mArticle Load (1.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE ("articles".category_id = 2)[0m
+  [1m[35mEditor Load (2.9ms)[0m  SELECT "editors".* FROM "editors"
+Rendered articles/index.html.erb within layouts/application (189.9ms)
+Completed 200 OK in 222ms (Views: 193.2ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-06 21:06:42 +0100
+  [1m[36mSQL (2.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mCategory Load (0.9ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36mArticle Load (1.7ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (1.3ms)[0m  SELECT "articles".* FROM "articles" ORDER BY created_at DESC LIMIT 5 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE ("articles".category_id = 1)[0m
+  [1m[35mArticle Load (1.1ms)[0m  SELECT "articles".* FROM "articles" WHERE ("articles".category_id = 2)
+  [1m[36mEditor Load (2.9ms)[0m  [1mSELECT "editors".* FROM "editors"[0m
+Rendered articles/index.html.erb within layouts/application (217.3ms)
+Completed 200 OK in 231ms (Views: 220.6ms | ActiveRecord: 10.6ms)
