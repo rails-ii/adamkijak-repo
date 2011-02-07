@@ -10,18 +10,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110204224241) do
+ActiveRecord::Schema.define(:version => 20110207191337) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
-    t.string   "content"
+    t.text     "content"
     t.integer  "category_id"
+    t.integer  "editor_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "categories", :force => true do |t|
     t.string   "name"
+    t.integer  "editor_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -38,11 +40,20 @@ ActiveRecord::Schema.define(:version => 20110204224241) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.integer  "editor_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "editors", ["email"], :name => "index_editors_on_email", :unique => true
   add_index "editors", ["reset_password_token"], :name => "index_editors_on_reset_password_token", :unique => true
+
+  create_table "profiles", :force => true do |t|
+    t.integer  "editor_id"
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

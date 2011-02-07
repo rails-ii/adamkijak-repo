@@ -1,6 +1,7 @@
 <b><%=h @article.title %></b><br>
 Category: <%=h @categories.find{ |c| c.id == @article.category_id}.name %>
 , created at: <%= @article.created_at%><br>
+Author: <%= @editors.find{|a| a.id == @article.editor_id}.email %> 
 <%=h raw @article.content %>
 
 <%if editor_signed_in?%>

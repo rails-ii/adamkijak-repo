@@ -28,7 +28,8 @@
             <div id="body-inner"> 
                 <div id="navigation"> 
                     <h2>Menu</h2> 
-					<%= link_to 'Home', root_path %>
+					<%= link_to 'Home', root_path %><br>
+					<%= link_to 'Editor\'s profiles', profiles_path %>
                     <ul id="collapser">
 					<% @categories = Category.all %>
                     <% if !@categories.empty? %>
@@ -47,12 +48,11 @@
 					<%end%>
 					<hr>
 					<% if editor_signed_in? %>
+					Logged as: <%= current_editor.email %><br>
 					<%= link_to "Sign out", destroy_editor_session_path %>
 					<%else%>
   					<%=link_to "Sign in", new_editor_session_path %><br>
-					  <% if !Editor.all.any? %>
-					    <%=link_to "Sign up", new_editor_registration_path %> 
-					  <%end%>
+					<%=link_to "Sign up", new_editor_registration_path %> 
 					<%end%>
                     </div> 
                 <div id="content"> 
@@ -63,7 +63,7 @@
             </div> 
         </div> 
         <div id="footer"> 
-            <p>Copyright &copy; 2010 Adam Kijak</p> 
+            <p>Copyright &copy; 2011 Adam Kijak</p> 
         </div> 
     </body> 
 </html> 

@@ -8,7 +8,7 @@ require "test_helper"
 # 4. Wylogowanie się (sprawdzenie czy nie wyświetlają się linki przeznaczone dla redaktora).
 # 5. Zalogowanie się.
 # 6. Usunięcie artykułu.
-# 6. Utworzenie 10 artykułów (testowanie paginacji).
+# 6. Utworzenie 10 artykułów (testowanie paginacjii i zawijania dlugi tresści).
 #
 # Po zakończonym teście wyświetlany jest w przeglądarce, efekt wizualny (html) efekt testów.
 class IntegrationTest < ActionController::IntegrationTest
@@ -17,7 +17,6 @@ class IntegrationTest < ActionController::IntegrationTest
   end
 
   test "use case scenario" do
-    # wejdź na /
 	visit '/'
 	click_link 'Sign up'
 	fill_in 'Email', :with => 'test@test.pl'
@@ -68,7 +67,7 @@ class IntegrationTest < ActionController::IntegrationTest
 	1.upto(10) { |i|
 		click_link 'New article'
 		fill_in 'Title', :with => "Title #{i}"
-		fill_in 'Content', :with => "Content of article #{i} " * 20
+		fill_in 'Content', :with => "Content of article #{i} " * 50
 		select "Category #{i%1+1}", :from => 'Category'
 		click_button 'Create'
 		page.has_content? 'Article was successfully created'
@@ -79,6 +78,36 @@ class IntegrationTest < ActionController::IntegrationTest
 	click_link '2'
 	page.has_content?('Title 4')
 	save_and_open_page
+  end
+
+  test "can't delete if not owner" do
+	visit '/'
+	click_link 'Sign up'
+	fill_in 'Email', :with => 'test1@test.pl'
+	fill_in 'Password', :with => 'test123'
+	fill_in 'Password confirmation', :with => 'test123'
+	click_button 'Sign up'
+	page.has_content? 'You have signed up successfully.'
+	click_link 'Sign out'
+	click_link 'Sign up'
+	fill_in 'Email', :with => 'test2@test.pl'
+	fill_in 'Password', :with => 'test123'
+	fill_in 'Password confirmation', :with => 'test123'
+	click_button 'Sign up'
+	page.has_content? 'You have signed up successfully.'
+	click_link 'Manage categories'
+	click_link 'New category'
+	fill_in 'Name', :with => 'Category 1'
+	click_button 'Create'
+	page.has_content? 'Category was successfully created.'
+	click_link 'Sign out'
+	click_link 'Sign in'
+	fill_in 'Email', :with => 'test2@test.pl'
+	fill_in 'Password', :with => 'test123'
+	click_button 'Sign in'
+	click_link 'Manage categories'
+	click_link 'Destroy'
+	page.has_content? 'You are not owner of the category.'
   end
  
 end

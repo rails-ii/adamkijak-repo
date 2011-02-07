@@ -1,10 +1,12 @@
 class CategoriesController < ApplicationController
   layout "application"
+  before_filter :authenticate_editor!, :except => [:show, :index]
 
   # Wyświetlanie kategorii
   # GET /categories
   def index
     @categories = Category.all
+	@editors = Editor.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -16,6 +18,7 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   def show
     @category = Category.find(params[:id])
+	@editors  = Editor.all
 
     respond_to do |format|
       format.html # show.html.erb
@@ -43,6 +46,7 @@ class CategoriesController < ApplicationController
   # Utworzenie nowej kateogrii, wraz z wyświetleniem informacji o sukcesie
   # POST /categories
   def create
+    params[:category][:editor_id] = current_editor.id
     @category = Category.new(params[:category])
 
     respond_to do |format|
@@ -62,12 +66,16 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
 
     respond_to do |format|
-      if @category.update_attributes(params[:category])
-        format.html { redirect_to(@category, :notice => 'Category was successfully updated.') }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @category.errors, :status => :unprocessable_entity }
+	  if( current_editor.id == @category.editor_id)
+		if @category.update_attributes(params[:category])
+		  format.html { redirect_to(@category, :notice => 'Category was successfully updated.') }
+		  format.xml  { head :ok }
+		else
+		  format.html { render :action => "edit" }
+		  format.xml  { render :xml => @category.errors, :status => :unprocessable_entity }
+		end
+	  else
+		format.html { redirect_to(@category, :notice => "You are not owner of the category.")}
       end
     end
   end
@@ -76,7 +84,11 @@ class CategoriesController < ApplicationController
   # DELETE /categories/1
   def destroy
     @category = Category.find(params[:id])
-    @category.destroy
+	if( current_editor.id == @category.editor_id)
+      @category.destroy
+	else
+	  flash[:notice] = "You are not owner of the category.";
+    end
 
     respond_to do |format|
       format.html { redirect_to(categories_url) }

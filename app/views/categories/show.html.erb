@@ -2,6 +2,10 @@
   <b>Name:</b>
   <%=h @category.name %>
 </p>
+<p>
+   <b>Author:</b>
+   <%=h @editors.find{|e| e.id == @category.editor_id}.email %>
+</p>
 
 
 <%= link_to 'Edit', edit_category_path(@category) %> |

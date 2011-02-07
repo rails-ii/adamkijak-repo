@@ -1,9 +1,13 @@
 CeeMeS::Application.routes.draw do
+  resources :profiles
+
   devise_for :editors
 
   root :to => "articles#index"
+
   resources :categories
   resources :articles
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,12 +1,14 @@
 class ArticlesController < ApplicationController
   layout "application"
   uses_tiny_mce :options => {:theme => 'advanced'}
+  before_filter :authenticate_editor!, :except => [:show, :index]
 
    # Wyświetlanie artykułów z paginacją
    # (GET /articles)
    def index
      @articles = Article.paginate :page => params[:page], :order => 'created_at DESC'
      @categories = Category.all
+	 @editors = Editor.all
    end
 
   # Wyświetlanie artykułu o zadanym id 	
@@ -14,6 +16,7 @@ class ArticlesController < ApplicationController
   def show
     @categories = Category.all
     @article = Article.find(params[:id])
+	@editors = Editor.all
 
     respond_to do |format|
       format.html # show.html.erb
@@ -43,6 +46,7 @@ class ArticlesController < ApplicationController
   # Utworzenie nowego artykułu, wraz z wyświetleniem informacji o sukcesie
   # (POST /articles)
   def create
+    params[:article][:editor_id] = current_editor.id
     @categories = Category.all
     @article = Article.new(params[:article])
 
@@ -64,13 +68,17 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
 
     respond_to do |format|
-      if @article.update_attributes(params[:article])
-        format.html { redirect_to(@article, :notice => 'Article was successfully updated.') }
-        format.xml  { head :ok }
+	  if( current_editor.id == @article.editor_id)
+		if @article.update_attributes(params[:article])
+		  format.html { redirect_to(@article, :notice => 'Article was successfully updated.') }
+		  format.xml  { head :ok }
+		else
+		  format.html { render :action => "edit" }
+		  format.xml  { render :xml => @article.errors, :status => :unprocessable_entity }
+		end
       else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @article.errors, :status => :unprocessable_entity }
-      end
+		  format.html { redirect_to(@article, :notice => "You are not owner of the article.")}
+	  end
     end
   end
 
@@ -79,7 +87,11 @@ class ArticlesController < ApplicationController
   def destroy
     @categories = Category.all
     @article = Article.find(params[:id])
-    @article.destroy
+	if( current_editor.id == @article.editor_id)
+	  @article.destroy
+	else
+	  flash[:notice] = "You are not owner of the article.";
+    end
 
     respond_to do |format|
       format.html { redirect_to(articles_url) }
