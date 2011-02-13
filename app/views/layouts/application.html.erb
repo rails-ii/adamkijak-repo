@@ -52,7 +52,7 @@
 					<%= link_to "Sign out", destroy_editor_session_path%>
 					<%else%>
   					<%=link_to "Sign in", new_editor_session_path%><br>
-					<% if !@editors.any? %>
+					<% if !Editor.all.any? %>
 					  <%=link_to "Sign up", new_editor_registration_path%> 
 					<%end%>
 					<%end%>
