@@ -1,15 +1,14 @@
-<h1>Editor's profiles</h1>
+<h1>Authors:</h1>
 
 <table>
   <tr>
     <th>Editor</th>
-    <th>Title</th>
   </tr>
 
 <% @profiles.each do |profile| %>
   <tr>
     <td><%= @editors.find{|e| e.id == profile.editor_id}.email %></td>
-    <td><%= profile.title %></td>
+	<td></td>
     <td><%= link_to 'Show', profile %></td>
   </tr>
 <% end %>

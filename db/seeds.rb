@@ -5,3 +5,5 @@
 #   
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Major.create(:name => 'Daley', :city => cities.first)
+
+Article.create(:title => "seed", :content => "<p>asdsadasdsaddddddddddddddddddddddd</p>", :editor_id => 1, :category_id => 1)

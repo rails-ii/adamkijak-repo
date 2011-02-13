@@ -1,7 +1,8 @@
-<b><%=h @article.title %></b><br>
-Category: <%=h @categories.find{ |c| c.id == @article.category_id}.name %>
-, created at: <%= @article.created_at%><br>
-Author: <%= @editors.find{|a| a.id == @article.editor_id}.email %> 
+<h2><b><%=h @article.title %></b></h2>
+<div id="byline">
+Category: <%=h @categories.find{ |c| c.id == @article.category_id}.name %> | 
+Posted : <%= @article.created_at%> by 
+<%= @editors.find{|a| a.id == @article.editor_id}.email %></div>
 <%=h raw @article.content %>
 
 <%if editor_signed_in?%>

@@ -34,6 +34,8 @@
 }
 #content
 {
+	padding-left: 4%;
+	padding-right: 4%;
     width: 99%;
 }
 #sidebar
@@ -62,46 +64,64 @@ ul li
     /*margin: 0.33em 0.5em 0.5em 1.5em;*/
 }
 .jqcNode { font-weight: bold; color: #036;}
+a:link { 
+	font-weight: bold; 
+	color: #036;
+	text-decoration: none;
+	white-space: nowrap;
+}
+a:visited { 
+	font-weight: bold; 
+	color: #036;
+	text-decoration: none;
+	white-space: nowrap;
+}
+a.article:link { 
+	font-weight: normal; 
+	color: #036;
+	text-decoration: none;
+	white-space: nowrap;
+}
+a.article:visited { 
+	font-weight: normal; 
+	color: #036;
+	text-decoration: none;
+	white-space: nowrap;
+}
+a.special:link { 
+	font-weight: bold; 
+	color: #C00;
+	text-decoration: none;
+	white-space: nowrap;
+}
+a.special:visited { 
+	font-weight: bold; 
+	color: #C00;
+	text-decoration: none;
+	white-space: nowrap;
+}
+#byline{
+	color: #999;
+	font-size: 0,3em;
+}
+#post{
+	display: block;
+	padding: 1%;
+}
 h2 {margin: 0.2em 0;}
 #collapser{margin: 0;}
-/*<!--[if lte IE 7]>
-<style type="text/css">
-    #body
-    {
-        overflow: visible;
-        width: 100%;
-    }
-    #navigation
-    {
-        border-bottom-width: 1px;
-        border-right-width: 0;
-        margin-bottom: 1em;
-        width: auto;
-    }
-    #navigation h2
-    {
-        margin: 0;
-    }
-    #navigation ul
-    {
-        margin: 0;
-        text-align: center;
-    }
-    #navigation li
-    {
-        display: inline;
-        margin: 0 0.5em;
-    }
-    #content
-    {
-        float: left;
-        width: 60%;
-    }
-    #sidebar
-    {
-        float: left;
-        width: 30%;
-    }
-</style>
-<![endif]--> 
-*/
+.notice, .error {
+  padding: 5px 8px;
+  margin: 10px 0;
+  width: 400px;
+}
+
+.notice {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
+
+.error {
+  background-color: #FCC;
+  border: solid 1px #C66;
+}

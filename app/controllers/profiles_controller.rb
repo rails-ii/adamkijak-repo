@@ -1,4 +1,14 @@
 class ProfilesController < ApplicationController
+  uses_tiny_mce :options => {
+	  :theme => 'advanced',
+       :mode =>"textareas",
+       :theme_advanced_buttons1 =>"bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,|,styleselect,formatselect,fontselect,fontsizeselect",
+       :theme_advanced_buttons2 =>"cut,copy,paste,pastetext,pasteword,|bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,anchor,image,cleanup,help,code,|,forecolor,backcolor,|,hr,removeformat,visualaid,|,sub,sup,|,charmap",
+ 	   :theme_advanced_buttons3 => "",
+       :theme_advanced_toolbar_location =>"top",
+       :theme_advanced_toolbar_align =>"left",
+
+  }
   before_filter :authenticate_editor!, :except => [:show, :index]
   # GET /profiles
   # GET /profiles.xml
