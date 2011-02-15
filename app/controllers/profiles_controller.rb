@@ -81,7 +81,7 @@ class ProfilesController < ApplicationController
 		  format.xml  { render :xml => @profile.errors, :status => :unprocessable_entity }
 		end
 	  else
-		format.html { redirect_to(@profile, :notice => "You are not owner of the profile.")}
+		format.html { redirect_to(@profile, :alert => "You are not the owner of the profile.")}
 	  end
     end
   end

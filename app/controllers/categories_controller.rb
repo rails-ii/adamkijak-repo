@@ -75,7 +75,7 @@ class CategoriesController < ApplicationController
 		  format.xml  { render :xml => @category.errors, :status => :unprocessable_entity }
 		end
 	  else
-		format.html { redirect_to(@category, :notice => "You are not owner of the category.")}
+		format.html { redirect_to(@category, :alert => "You are not the owner of the category.")}
       end
     end
   end
@@ -87,7 +87,7 @@ class CategoriesController < ApplicationController
 	if( current_editor.id == @category.editor_id)
       @category.destroy
 	else
-	  flash[:notice] = "You are not owner of the category.";
+	  flash[:alert] = "You are not the owner of the category.";
     end
 
     respond_to do |format|

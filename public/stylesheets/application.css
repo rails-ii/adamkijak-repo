@@ -119,9 +119,15 @@ h2 {margin: 0.2em 0;}
 .notice {
   background-color: #CFC;
   border: solid 1px #6C6;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .error {
   background-color: #FCC;
   border: solid 1px #C66;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }

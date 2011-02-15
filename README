@@ -1,3 +1,6 @@
 CeeMes
 
-(description will be here)
+Simple 'Content Manager System'.
+
+To fill up database with sample data:
+rake db:seed

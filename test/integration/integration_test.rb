@@ -78,10 +78,9 @@ class IntegrationTest < ActionController::IntegrationTest
 	page.has_no_content?('Title 4')
 	click_link '2'
 	page.has_content?('Title 4')
-	save_and_open_page
   end
 
-  test "can't delete if not owner" do
+  test "can't delete if not the owner" do
 	visit '/'
 	click_link 'Sign up'
 	fill_in 'Email', :with => 'test1@test.pl'

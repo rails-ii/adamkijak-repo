@@ -86,7 +86,7 @@ class ArticlesController < ApplicationController
 		  format.xml  { render :xml => @article.errors, :status => :unprocessable_entity }
 		end
       else
-		  format.html { redirect_to(@article, :notice => "You are not owner of the article.")}
+		  format.html { redirect_to(@article, :alert => "You are not the owner of the article.")}
 	  end
     end
   end
@@ -99,11 +99,11 @@ class ArticlesController < ApplicationController
 	if( current_editor.id == @article.editor_id)
 	  @article.destroy
 	else
-	  flash[:notice] = "You are not owner of the article.";
+	  flash[:alert] = "You are not the owner of the article.";
     end
 
     respond_to do |format|
-      format.html { redirect_to(articles_url) }
+      format.html { redirect_to(categories_url) }
       format.xml  { head :ok }
     end
   end

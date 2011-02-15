@@ -10,6 +10,7 @@ gem 'devise', '= 1.1.2'
 gem 'will_paginate', "~> 3.0.pre2"
 gem 'tiny_mce'
 gem 'truncate_html'
+gem 'faker'
 
 group :test do
   gem 'capybara'
