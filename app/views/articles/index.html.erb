@@ -16,6 +16,3 @@
 	<hr>
 <% end %>
 <%= will_paginate(@articles) %>
-<%if editor_signed_in?%>
-<br><%= link_to 'New article', new_article_path %>
-<%end%>

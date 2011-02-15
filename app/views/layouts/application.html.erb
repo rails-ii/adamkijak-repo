@@ -45,6 +45,7 @@
 					<%= link_to 'Authors', profiles_path %>
 					<% if editor_signed_in? %>
 					  <%= link_to 'Manage categories', categories_path, :class => "special"%>
+					  <%= link_to 'New article', new_article_path, :class => "special"%>
 					<%end%>
 					<hr>
 					<% if editor_signed_in? %>
